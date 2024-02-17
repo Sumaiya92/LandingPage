@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/bc793d7b38.js" crossorigin="anonymous"></script>
+<body>
+    
+    <!-- ----------hero section-------- -->
+    <div class="hero">
+        <div class="-content">
+          <h1 class="hero-title">Where <span>Creativity</span> Takes Flight  </h1>
+          <p class="hero-subtitle">Unlocking <span>Creativity</span>, Unleashing <span>Potential</span> </p>
+          
+        </div>
+      </div>
+      <!-- --------About Founder Section------- -->
+      <section class="visionary-founder">
+        <h1 class="founder">Meet Creative <span>Founder </span>Of <span>Darsheel Salva</span> </h1>
+        
+        <div class="founder-content"> 
+          
+                <ul>
+                    <li> Darsheel the driving force behind the company. With a passion for innovation and a keen eye for food,people,and brand building into eveything he does with the goal of bringing legendary receipes to the world.</li>
+                    <li> A visonary leader with passion for building business.Darsheel is also rolling out his consultant programme to help fellow founders and entrepreneurs.</li>
+                    <li>With unshakable drive and insanitable appetite for culinary exploration,</li>
+                    </ul>
+
+        </div>
+    </section>
+
+    <!-- --------blackbox why should u go ahead with me section--- -->
+    <section class="why-should-you-go-ahead-with-me"> 
+        <h2>Why Should You Go Ahead With Me</h2> 
+        <div class="features"> 
+            <div class="feature">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Enhanced Creativity</h3> 
+                <p> Generate new ideas, think outside the box, and approach problems from a fresh perspective.</p>
+            </div> 
+            <div class="feature"> 
+                <i class="fas fa-cogs"></i> 
+                <h3>Custom Solutions</h3> 
+                <p>We offer custom solutions tailored to your business needs, ensuring that you get the most out of your website.</p> 
+            </div>
+            <div class="feature"> 
+                <i class="fas fa-globe"></i> 
+                <h3>Global Reach</h3> 
+                <p>Our websites are designed to reach a global audience, giving your business the potential to expand and grow.</p> 
+            </div> 
+            <div class="feature"> 
+                <i class="fas fa-pencil-ruler"></i> 
+                <h3>Professional Design</h3> 
+                <p>Our team of experienced designers will work with you to create a professional and visually appealing website that represents your brand.</p> 
+            </div> 
+            <div class="feature">
+                <i class="fas fa-brain"></i></i>
+                <h3>Improve Decison making</h3> 
+                <p>We use data to drive our design and development decisions, ensuring that your website performs at its best and delivers results.</p> 
+            </div> 
+            <div class="feature"> 
+                <i class="fa-solid fa-certificate"></i>
+                <h3>Reputed Brand</h3> 
+                <p>Emphasizes ethical and transparent practices, which can help build a positive reputation for your brand.</p> 
+            </div> 
+        </div> 
+    </section>
+
+<!-- --------------------timer------------------- -->
+    <div class="container" id="main-page">
+        <div class="content">
+            <h2>Time <span>Ticking</span> on fast</h2>
+            <h3>Unlock the Secrets Within</h3>
+            <div class="timer">
+                <div class="timer-count">
+                    <h1 id="counter">10:00</h1>
+                </div>
+            </div>
+            <button id ="register" onclick="call_to_action_handler()">Register  Now &nbsp &#160;₹699 &nbsp;&#160; <s>₹1999</s></span></button>
+        </div>
+        <img src="./images/rocket.png" class="rocket">
+    </div>
+    <!-- --------------------------Call to Action------------------------- -->
+
+    <div class="call-to-action" id="call-to-action">
+        <div class="container">
+            <i onclick="call_to_action_close_icon_handler()" class="fa-solid fa-xmark call-to-action-close-icon"></i>
+            <h1>Rapid Learning Special(Save INR 1999)<br></h1>
+            <div class="key-features">
+                <ul>
+                    <li>Unlimited learning from Professionals in just 3 hrs</li>
+                    <li>Access course materials anytime,anywhere</li>
+                    <li>Limited time order:Enroll now for discounted rates</li>
+                    <li>Explore your path of learning</li>
+                </ul>
+            </div>
+            <button id ="register" onclick="call_to_action_handler()">Register  Now &nbsp &#160;₹699 </button>
+        </div>
+
+    </div>
+
+	<div id="form-container">
+		<form id="slide-up-form">
+            <h2>GRAB THE DEALS!</h2>
+            <div style="position: relative; display: flex; flex-direction: column;">
+                <i  onclick="slide_up_form_close_icon_handler()" class="fa-solid fa-xmark slide-up-form-close-icon"></i>
+                <label for="phone-number">Phone Number:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your phone number">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                
+                <input type="submit" id="submit" name="submit" >
+                
+            </div>
+          
+
+			
+		</form>
+	</div>
+
+
+    <script>
+        var minute=9;
+        var second=60;
+
+        setInterval(function(){
+            if (minute==0&&second==1) 
+            {
+                document.getElementById("counter").innerHTML="00:00";
+            }
+            else
+            {
+                second--;
+                if (second==0) 
+                {
+                    minute--;
+                    second=60;
+                }
+                if (minute==0) {
+                    minute=minute;
+                }
+            }
+            if (minute.toString().length==1) {
+                minute="0"+minute;
+                
+            }
+            if (second.toString().length==1) {
+                second="0"+second;
+                
+            }
+            document.getElementById("counter").innerHTML=minute +":"+second;
+
+
+        },1000)
+
+       function call_to_action_handler(){
+        document.getElementById("call-to-action").style.display= "block"
+       }
+
+       function call_to_action_close_icon_handler(){
+        document.getElementById("call-to-action").style.display= "none"
+       }
+
+       function slide_up_form_close_icon_handler(){
+        var formContainer = document.getElementById('form-container');
+        formContainer.style.zIndex='-1';
+		formContainer.style.bottom = '-550px';
+       }
+
+       window.onload = function() {
+	setTimeout(function() {
+		var formContainer = document.getElementById('form-container');
+        formContainer.style.zIndex='2';
+		formContainer.style.bottom = '0';
+	}, 15000);
+}; 
+    </script>
+
+</body>
+</html>
